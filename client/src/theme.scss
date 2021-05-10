@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+$fontFamily: 'Poppins', sans-serif;
+
+$palette      : (
+  'primary'   : #56D364,
+  'secondary' : #000000,
+  'light'     : #F2F2F2,
+  'gray'      : #1B1B1B,
+  'gray-dark' : #161616,
+  'gray-light': #858585
+);
+
+$weight-type   : (
+  'extra-light': 200,
+  'light'      : 300,
+  'regular'    : 400,
+  'medium'     : 500,
+  'semi-bold'  : 600,
+  'bold'       : 700,
+  'extra-bold' : 800
+);
+
+$headline2      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'semi-bold'),
+  font-size     : 72px,
+  line-height   : 108px,
+  letter-spacing: -0.5px
+);
+
+$headline3      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'regular'),
+  font-size     : 48px,
+  line-height   : 72px,
+  letter-spacing: 0px
+);
+
+$headline4      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'regular'),
+  font-size     : 34px,
+  line-height   : 51px,
+  letter-spacing: 0.25px
+);
+
+$headline5      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'regular'),
+  font-size     : 24px,
+  line-height   : 36px,
+  letter-spacing: 0px
+);
+
+$headline6      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'medium'),
+  font-size     : 20px,
+  line-height   : 30px,
+  letter-spacing: 0.15px
+);
+
+$subtitle1      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'regular'),
+  font-size     : 16px,
+  line-height   : 24px,
+  letter-spacing: 0.15px
+);
+
+$subtitle2      : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'medium'),
+  font-size     : 14px,
+  line-height   : 21px,
+  letter-spacing: 0.1px
+);
+
+$body1          : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'light'),
+  font-size     : 16px,
+  line-height   : 24px,
+  letter-spacing: 0.5px
+);
+
+$body2          : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'light'),
+  font-size     : 14px,
+  line-height   : 21px,
+  letter-spacing: 0.25px
+);
+
+$body3          : (
+  font-family   : $fontFamily,
+  font-style    : normal,
+  font-weight   : map-get($map: $weight-type, $key: 'regular'),
+  font-size     : 12px,
+  line-height   : 18px,
+  letter-spacing: 0.4px
+);
+
+$font-dict   : (
+  'headline2': $headline2,
+  'headline3': $headline3,
+  'headline4': $headline4,
+  'headline5': $headline5,
+  'headline6': $headline6,
+  'subtitle1': $subtitle1,
+  'subtitle2': $subtitle2,
+  'body1'    : $body1,
+  'body2'    : $body2,
+  'body3'    : $body3
+);

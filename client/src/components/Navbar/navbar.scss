@@ -1,0 +1,64 @@
+@import '../../style';
+
+
+#navbar {
+  margin    : 0px;
+  top       : 0;
+  position  : fixed;
+  display   : flex;
+  width     : 100%;
+  height    : 92px;
+  padding   : 0px $marginLayout 0px $marginLayout;
+  z-index   : 9999;
+  background: linear-gradient(color('secondary') 45%, transparent 100%);
+
+  div {
+    display    : flex;
+    align-items: center;
+
+    h1 {
+      @include fonts('headline4', 'light', 'semi-bold');
+    }
+
+    ul {
+      padding        : 0px;
+      margin         : 0px -34px 0px -34px;
+      display        : flex;
+      flex-direction : row;
+      align-items    : space-between;
+      list-style-type: none;
+      text-decoration: none;
+
+      li {
+        margin : 0px;
+        padding: 0px 34px 0px 34px;
+
+        a {
+          text-decoration: none;
+          @include fonts('body1', 'light');
+
+          div {
+            width        : 0%;
+            border-bottom: 2px solid color('primary');
+            transition   : 0.3s;
+          }
+        }
+
+        a:active div {
+          color: color('primary');
+        }
+
+        a:hover div {
+          animation-name    : decompress;
+          animation-duration: .5s;
+          width             : 50%;
+        }
+      }
+    }
+  }
+}
+
+.navbar_title {
+  display: flex;
+  flex   : 1;
+}

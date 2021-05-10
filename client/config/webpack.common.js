@@ -1,8 +1,10 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const webpack = require('webpack')
+const dotenv = require('dotenv');
 
-/** @type {import('webpack').Configuration} */
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -29,11 +31,18 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".json", ".jsx"],
+    // fallback: {
+    //   "path": require.resolve("path-browserify")
+    // }
   },
   plugins: [
+    new webpack.DefinePlugin({
+       'process.env': JSON.stringify(dotenv.config().parsed)
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-    }),
+      favicon: "./public/static/icons/favicon.png"
+    })
   ],
 };

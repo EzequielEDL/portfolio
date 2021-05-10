@@ -1,0 +1,70 @@
+@import '../../style';
+
+
+#footer {
+  margin: 0px;
+}
+
+#footer_content {
+  height          : 182px;
+  margin          : 0px;
+  display         : flex;
+  flex-direction  : row;
+  align-items     : center;
+  justify-content : space-between;
+  padding         : 0px $marginLayout 0px $marginLayout;
+  background-color: color('gray');
+
+  button {
+    @include button()
+  }
+
+  h4 {
+    @include fonts('headline4', 'light', 'semi-bold');
+  }
+
+  ul {
+    display: flex;
+    margin : 0px -10px 0px -10px;
+
+    li {
+      margin         : 0px 10px 0px 10px;
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      border         : 2px solid color('primary');
+      border-radius  : 100%;
+      @include iconButtonStyle();
+    }
+  }
+}
+
+#footer_line {
+  position        : absolute;
+  width           : 100%;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  z-index         : 6;
+
+  span {
+    position        : absolute;
+    width           : 2px;
+    height          : 36px;
+    background-color: color('primary');
+  }
+
+}
+
+#footer_bottom {
+  display         : flex;
+  margin          : 0px;
+  justify-content : center;
+  align-items     : center;
+  height          : 58px;
+  background-color: color('gray-dark');
+
+  p {
+    @include fonts('body3', 'gray-light', 'regular');
+  }
+}
