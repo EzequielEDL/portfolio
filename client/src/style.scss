@@ -6,8 +6,8 @@
 }
 
 @keyframes blink {
-  to { filter  : opacity(1); }
-  from { filter: opacity(0); }
+  to { filter  : opacity(0); }
+  from { filter: opacity(1); }
 }
 
 @function color($name) {
@@ -37,9 +37,10 @@ $marginLayout: 24px;
   @include fonts('subtitle1', 'light', 'medium');
   width           : 170px;
   height          : 48px;
+  min-height      : 48px;
   border          : 2px solid color('primary');
   background-color: transparent;
-  transition      : 0.5s;
+  transition      : 0.3s;
   border-radius   : 0px;
 
   &:hover {
@@ -65,10 +66,35 @@ $marginLayout: 24px;
   }
 }
 
+@mixin headline() {
+  padding-bottom: 32px;
+
+  h5 {
+    position: relative;
+    @include fonts('headline5', 'light', 'semi-bold');
+
+    &:after {
+      content         : '';
+      position        : absolute;
+      height          : 2px;
+      width           : 16px;
+      left            : 0px;
+      top             : -2px; 
+      background-color: color('primary');
+    }
+  }
+
+  h6 {
+    margin-top: -8px;
+    @include fonts('subtitle1', 'primary', 'semi-bold');
+  }
+}
+
 * {
   margin    : 0;
   padding   : 0;
   box-sizing: border-box;
+  transition: .3s;
 }
 
 .app {
@@ -83,7 +109,8 @@ section {
 }
 
 body {
-  scroll-behavior: smooth;
+  scroll-behavior : smooth;
+  background-color: red;
 }
 
 body::-webkit-scrollbar {
@@ -98,4 +125,14 @@ body::-webkit-scrollbar-thumb {
   background-color: color('primary');
   border-radius   : 0px;
   border          : 3px solid color('gray-dark');
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+ -webkit-box-shadow: 0 0 0 30px color('gray-dark') inset !important;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: color('primary') !important;
 }

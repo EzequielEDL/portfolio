@@ -2,5 +2,65 @@
 
 
 #contact {
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  background-color: color('secondary');
+  padding: $marginLayout*4 $marginLayout $marginLayout*2 $marginLayout;
+}
+
+#contact_content {
+  display: flex;
+  width  : 100%;
+  height: 100%;
+}
+
+#contact_content_left {
+  display        : flex;
+  flex           : 1;
+  flex-direction : column;
+  justify-content: space-between;
+  align-items    : flex-start;
+
+  ul {
+    margin             : -4px 0px -4px 0px;
+    list-style-position: inside;
+    list-style-type    : square;
+    li {
+      padding: 4px 0px 4px 0px;
+      @include fonts('body1', 'light', 'regular');
+      a {
+        @include fonts('body1', 'primary', 'medium');
+      }
+    }
+  }
+
+  #contact_content_left_letter {
+    display    : flex;
+    align-items: flex-end;
+
+    img {
+      padding-bottom: 9px;
+    }
+
+    h6 {
+      padding-left : 16px;
+      @include fonts('headline6', 'primary', 'semi-bold');
+
+      &:after {
+        content: '@gmail.com';
+        color: color('light');
+      }
+    }
+  }
+}
+
+#contact_content_right {
+  display        : flex;
+  flex           : 1;
+  justify-content: flex-end;
+  align-items    : flex-start;
+}
+
+#contact_headline {
+  @include headline();
 }

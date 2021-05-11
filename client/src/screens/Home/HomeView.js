@@ -13,7 +13,7 @@ export default class HomeView extends React.Component {
       setTimeout(() => {
         selector.innerText = selector.innerText.slice(0, -1);
         resolve();
-      }, time)
+      }, time/2)
     })
   }
 

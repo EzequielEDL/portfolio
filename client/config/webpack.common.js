@@ -31,9 +31,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".json", ".jsx"],
-    // fallback: {
-    //   "path": require.resolve("path-browserify")
-    // }
+    fallback: {
+      "path": require.resolve("path-browserify")
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
