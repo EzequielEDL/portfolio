@@ -8,8 +8,6 @@ export default class ProjectsView extends React.Component {
 
   }
 
-
-
   render() {
     return (
       <section id='projects'>

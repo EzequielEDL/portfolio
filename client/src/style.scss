@@ -1,5 +1,6 @@
 @import './theme';
 
+
 @keyframes decompress {
     from { width: 0%; }
     to { width  : 50%; }
@@ -79,7 +80,7 @@ $marginLayout: 24px;
       height          : 2px;
       width           : 16px;
       left            : 0px;
-      top             : -2px; 
+      top             : -2px;
       background-color: color('primary');
     }
   }
@@ -110,7 +111,7 @@ section {
 
 body {
   scroll-behavior : smooth;
-  background-color: red;
+  background-color: black;
 }
 
 body::-webkit-scrollbar {
