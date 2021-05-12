@@ -1,22 +1,20 @@
 import React from 'react';
 import './style.scss';
 import { Home, About, Projects, Contact } from './screens';
-import { Navbar, FloatNav, Footer, Card } from './components';
+import { Navbar, Footer } from './components';
 
 
 export default class App extends React.Component {
   render() {
     return (
       <div className='app'>
-        <Card />
+        <Navbar />
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     )
   }
 }
-
-// <Navbar />
-// <Home />
-// <About />
-// <Projects />
-// <Contact />
-// <Footer />

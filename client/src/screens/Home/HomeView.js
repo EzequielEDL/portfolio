@@ -3,6 +3,7 @@ import './home.scss';
 import { brush, photo } from '../../../public/static';
 import { FloatNav } from '../../components';
 
+
 export default class HomeView extends React.Component {
   constructor(props) {
     super(props);
@@ -56,17 +57,17 @@ export default class HomeView extends React.Component {
     let targets = document.getElementById('targets');
     let iconScroll = document.getElementById('icon_scroll');
 
-    await this.changeNames(targets, ['Full stack developer', 'UX/UI Designer', 'Data analytics']);
-
     window.addEventListener('scroll', function() {
       var value = window.scrollY;
 
       brush.style.marginLeft = -value * 0.3 + 'px';
       photo.style.bottom = -value * 0.1 + 'px';
       text.style.marginTop = value * 1 + 'px';
-      iconScroll.style.opacity = value * (iconScroll.style.opacity * 0.1);
-      if (iconScroll.style.opacity <= 0) iconScroll.style.display = 'none';
+      iconScroll.style.opacity = value * (iconScroll.style.opacity * 0.8);
+      // if (iconScroll.style.opacity <= 0) iconScroll.style.display = 'none';
     })
+
+    await this.changeNames(targets, ['Full stack developer', 'UX/UI Designer', 'Data analytics']);
   }
 
   render() {

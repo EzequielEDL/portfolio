@@ -5,6 +5,7 @@ import './card.scss';
 export default class Card extends React.Component {
   constructor(props) {
     super(props);
+    console.log('entro')
   }
 
   render() {
